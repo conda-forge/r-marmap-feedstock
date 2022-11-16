@@ -1,4 +1,4 @@
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/marmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/marmap/marmap_{{ version }}.tar.gz
-  sha256: ef9eb916710ddc1e2d75d8b3866413a872be8374c9b7d08f397570187ea74f07
+  sha256: d126bd318538b8a0b7b094a456501154632917e12a004fc70726c06126d6451b
 
 build:
   merge_build_host: true  # [win]
