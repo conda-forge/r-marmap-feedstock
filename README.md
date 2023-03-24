@@ -1,11 +1,22 @@
+About r-marmap-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-marmap-feedstock/blob/main/LICENSE.txt)
+
 About r-marmap
-==============
+--------------
 
 Home: https://github.com/ericpante/marmap
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-marmap-feedstock/blob/main/LICENSE.txt)
+Summary: Import xyz data from the NOAA (National Oceanic and Atmospheric Administration, <https://www.noaa.gov>), GEBCO (General Bathymetric Chart of the Oceans, <https://www.gebco.net>) and other sources, plot xyz data to prepare publication-ready figures, analyze xyz data to extract transects, get depth / altitude based on geographical coordinates, or calculate z-constrained least-cost paths.
+About r-marmap
+--------------
+
+Home: https://github.com/ericpante/marmap
+
+Package license: GPL-3.0-or-later
 
 Summary: Import xyz data from the NOAA (National Oceanic and Atmospheric Administration, <https://www.noaa.gov>), GEBCO (General Bathymetric Chart of the Oceans, <https://www.gebco.net>) and other sources, plot xyz data to prepare publication-ready figures, analyze xyz data to extract transects, get depth / altitude based on geographical coordinates, or calculate z-constrained least-cost paths.
 
