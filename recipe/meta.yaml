@@ -23,6 +23,7 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
+    - r-codetools
     - r-dbi
     - r-rsqlite
     - r-adehabitatma
@@ -51,6 +52,8 @@ requirements:
     - r-sp
 
 test:
+  requires:
+    - r-codetools
   commands:
     - $R -e "library('marmap')"           # [not win]
     - "\"%R%\" -e \"library('marmap')\""  # [win]
