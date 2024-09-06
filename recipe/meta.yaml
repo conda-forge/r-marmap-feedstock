@@ -1,7 +1,5 @@
 {% set version = "1.0.10" %}
-
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-marmap
@@ -14,9 +12,8 @@ source:
   sha256: 784340d3d0d3de4c35ccc326a6c9a5f6ca007c5d37cd63edf49a1076a199b17e
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
-
+  number: 2
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,9 +21,9 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-
   host:
     - r-base
+    - r-codetools
     - r-dbi
     - r-rsqlite
     - r-adehabitatma
@@ -39,7 +36,6 @@ requirements:
     - r-reshape2
     - r-shape
     - r-sp
-
   run:
     - r-base
     - r-dbi
@@ -56,20 +52,21 @@ requirements:
     - r-sp
 
 test:
+  requires:
+    - r-codetools
   commands:
     - $R -e "library('marmap')"           # [not win]
     - "\"%R%\" -e \"library('marmap')\""  # [win]
 
 about:
   home: https://github.com/ericpante/marmap
-
   license: GPL-3.0-or-later
   summary: Import xyz data from the NOAA (National Oceanic and Atmospheric Administration, <https://www.noaa.gov>), GEBCO (General Bathymetric Chart of the Oceans, <https://www.gebco.net>) and other sources, plot xyz data to prepare publication-ready figures, analyze xyz data to extract transects, get depth / altitude based
     on geographical coordinates, or calculate z-constrained least-cost paths.
-
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - ocefpaf
