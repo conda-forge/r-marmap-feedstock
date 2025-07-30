@@ -1,4 +1,4 @@
-{% set version = "1.0.10" %}
+{% set version = "1.0.12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/marmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/marmap/marmap_{{ version }}.tar.gz
-  sha256: 784340d3d0d3de4c35ccc326a6c9a5f6ca007c5d37cd63edf49a1076a199b17e
+  sha256: 6ee5238b476911253ddd954098ae5a0979dc65ee616e650b3d18041cfdc08895
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
